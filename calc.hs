@@ -13,13 +13,13 @@ calcTree (Leaf a) = toNum a
 calcTree (Node op a b) = (operation op) (calcTree a) (calcTree b)
 
 
-toNum num = read num :: Int
+toNum num = read num :: Float
 
 operation s
   | s == "+" = (+)
   | s == "-" = (-)
   | s == "*" = (*)
-  | s == "/" = div
+  | s == "/" = (/)
   
   
 
